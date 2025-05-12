@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Order System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #e0f7e9; /* Soft green background */
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #2e7d32, #66bb6a);
+      color: white;
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ffffff;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #66bb6a;
+    }
+
+    .form-section {
+      background: #ffffff;
+      margin: 40px auto;
+      padding: 40px;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-section h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #2e7d32;
+      outline: none;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background-color: #2e7d32;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #66bb6a;
+    }
+
+    footer {
+      margin-top: 60px;
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Online Ordering System</h1>
+    <p>Order your favorite products easily and quickly</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div><strong style="color:#66bb6a">OrderEase</strong></div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Order</a></li>
+      <li><a href="#">Track</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <h2>Place Your Order</h2>
+    <form action="#" method="post">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3" placeholder="Enter delivery address" required></textarea>
+
+      <label for="category">What are you ordering?</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="food">Food</option>
+        <option value="clothes">Clothes</option>
+        <option value="shoes">Shoes</option>
+        <option value="electronics">Electronics</option>
+      </select>
+
+      <label for="amount">Amount of Payment (USD):</label>
+      <input type="number" id="amount" name="amount" placeholder="e.g. 50.00" required>
+
+      <label for="datetime">Preferred Delivery Date & Time:</label>
+      <input type="datetime-local" id="datetime" name="datetime" required>
+
+      <button type="submit">Submit Order</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 OrderEase Inc. | Powered by Green Ideas 🌿</p>
+  </footer>
+
+</body>
+</html>
